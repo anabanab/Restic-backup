@@ -1,0 +1,16 @@
+[Unit]
+Description=Restic Backup Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/backup.sh
+User=anabi
+Group=anabi
+Environment=RESTIC_REPO="sftp:anabi@192.168.56.4:/home/anabi/backup"
+Environment=RESTIC_PASSWORD="securepassword"
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+

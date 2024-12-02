@@ -8,7 +8,7 @@ ExecStart=/usr/local/bin/backup.sh
 User=anabi
 Group=anabi
 Environment=RESTIC_REPO="sftp:anabi@192.168.56.4:/home/anabi/backup"
-Environment=RESTIC_PASSWORD="securepassword"
+Environment=RESTIC_PASSWORD="mittSTARKAlösen"
 Restart=on-failure
 
 [Install]
